@@ -4,7 +4,7 @@ Elasticsearch for .NET Developers Presentation held for Exadel
 Minimal API web application with official Elasticsearch .NET Client (NEST) usage examples.
 
 # Prerequesites:
-Windows Subsystem for Linux 2 istalled
+Windows Subsystem for Linux 2 istalled, 
 Docker Desktop installed
 
 Run `docker compose up -d(detached)` in the folder with docker-compose.yml for Elasticsearch and Kibana instances installation on your machine
