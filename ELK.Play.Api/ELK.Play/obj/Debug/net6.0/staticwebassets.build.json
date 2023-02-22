@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "0fLd0dAMryEQFf+2hRkmEEnHZ0CKFpcpb/ZNCyG6tlE=",
+  "Source": "ELK.Play",
+  "BasePath": "_content/ELK.Play",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

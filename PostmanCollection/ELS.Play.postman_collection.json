@@ -1,0 +1,506 @@
+{
+	"info": {
+		"_postman_id": "7a52a10b-bc61-4ce1-b6e3-72bf55fabae4",
+		"name": "ELS.Play",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "915322"
+	},
+	"item": [
+		{
+			"name": "Query string query",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5200/products?query=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Match query",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5200/products/match?query=eat not",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"products",
+						"match"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "eat not"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Match Fuzz query",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5200/products/match/fuzz?query=lobster",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"products",
+						"match",
+						"fuzz"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "lobster"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Match phrase query",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5200/products/match-phrase?query=eat not",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"products",
+						"match-phrase"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "eat not"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Multi match query",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5200/products/multi-match?query=вкусное",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"products",
+						"multi-match"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "вкусное"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Term query",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5200/products/term?query=eat",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"products",
+						"term"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "eat"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Term Range query",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5200/products/term?query=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"products",
+						"term"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get by Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 1080,\r\n    \"title\": \"Hkjhkjgfgfg\",\r\n    \"description\" : \"Eat it\",\r\n    \"price\": 3.99,\r\n    \"quantity\" : 100000,\r\n    \"producer\" : \"dsdsd\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5200/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 1080,\r\n    \"title\": \"NotKnown stuff\",\r\n    \"description\" : \"Throw it away!\",\r\n    \"price\": 1.99,\r\n    \"quantity\" : 100000,\r\n    \"producer\" : \"Biohazard\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5200/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Single update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 1080,\r\n    \"title\": \"NotKnown stuff\",\r\n    \"description\" : \"Throw it away!\",\r\n    \"price\": 10.99,\r\n    \"quantity\" : 100000,\r\n    \"producer\" : \"Biohazard\",\r\n    \"tags\" : [ \"hazardous\" , \"harmful\" , \"threat\" ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5200/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Scripted update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5200/products/1/quantity/200000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"products",
+						"1",
+						"quantity",
+						"200000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bulk update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\r\n    \"id\" : 1080,\r\n    \"title\": \"NotKnown stuff\",\r\n    \"description\" : \"Throw it away!\",\r\n    \"price\": 10.99,\r\n    \"quantity\" : 100000,\r\n    \"producer\" : \"Biohazard\",\r\n    \"tags\" : [ \"hazardous\" , \"harmful\" , \"threat\" ]\r\n}]"
+				},
+				"url": {
+					"raw": "http://localhost:5200/products/bulk",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"products",
+						"bulk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Aggr metrics query",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 1080,\r\n    \"title\": \"Hkjhkjgfgfg\",\r\n    \"description\" : \"Eat it\",\r\n    \"price\": 3.99,\r\n    \"quantity\" : 100000,\r\n    \"producer\" : \"dsdsd\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5200/products/aggr/metrics",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"products",
+						"aggr",
+						"metrics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Aggr buckets query",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 1080,\r\n    \"title\": \"Hkjhkjgfgfg\",\r\n    \"description\" : \"Eat it\",\r\n    \"price\": 3.99,\r\n    \"quantity\" : 100000,\r\n    \"producer\" : \"dsdsd\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5200/products/aggr/buckets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"products",
+						"aggr",
+						"buckets"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
